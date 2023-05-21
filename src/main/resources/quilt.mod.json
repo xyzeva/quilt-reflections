@@ -1,0 +1,40 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "io.github.xyzeva",
+		"id": "quilt_reflections",
+		"version": "${version}",
+		"metadata": {
+			"name": "Quilt Reflections",
+			"description": "A fix to use Reflections (https://github.com/ronmamo/reflections) on Quilt file systems.",
+			"contributors": {
+				"xyzeva": "Owner"
+			},
+			"contact": {
+				"homepage": "https://modrinth.com/quilt-reflections/",
+				"issues": "https://github.com/xyzeva/quilt-reflections/issues",
+				"sources": "https://github.com/xyzeva/quilt-reflections/"
+			},
+			"icon": "assets/quilt_reflections/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"entrypoints": {
+			"init": "io.github.xyzeva.quilt_reflections.QuiltReflectionsMod"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.18.3-"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=6.0.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": ">=1.19.4"
+			}
+		]
+	},
+	"mixin": "quilt_reflections.mixins.json"
+}
